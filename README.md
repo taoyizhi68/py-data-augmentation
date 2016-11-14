@@ -15,8 +15,10 @@ pip install pydaag
 ```
 
 ## How to use:
-Your input images should have shape like (img_numbers, img_rows, img_cols, img_channels),
-if input images are grayscale, then the shape should be (img_numbers, img_rows, img_cols).
+Your input images should have shape like (img_numbers, img_rows, img_cols, img_channels).
+
+If input images are grayscale, then the shape should be (img_numbers, img_rows, img_cols).
+
 Simple example:
 ```
 from pydaag import pydaag
@@ -37,16 +39,18 @@ images_ = pydaag.data_augmentation(images, x_slide=0.2, y_slide=0.2,
                                    blur_max_sigma=3, noise_max_sigma=20)
 ```
 You can find an example in test/test.py.
+
 Run the test file:
 ```
 git clone https://github.com/taoyizhi68/py-data-augmentation.git
 cd py-data-augmentation\test
 python test.py
-
 ```
 
 **inputs:**
+
 ![](https://github.com/taoyizhi68/py-data-augmentation/blob/master/test/img/input.png "inputs")
 
 **outputs:**
+
 ![](https://github.com/taoyizhi68/py-data-augmentation/blob/master/test/img/output.png "outputs")
