@@ -33,12 +33,20 @@ inputs:
 	noise_max_sigma: Maximum standard deviation of Gaussian noise
 #######################################################################
 images_ = pydaag.data_augmentation(images, x_slide=0.2, y_slide=0.2, 
-                                 z_rotation=20, y_rotation=20, x_rotation=20, 
-                                 blur_max_sigma=3, noise_max_sigma=20)
+                                   z_rotation=20, y_rotation=20, x_rotation=20, 
+                                   blur_max_sigma=3, noise_max_sigma=20)
 ```
-You can find a notebook example in test/test.ipynb.
+You can find an example in test/test.py.
+Run the test file:
+```
+git clone https://github.com/taoyizhi68/py-data-augmentation.git
+cd py-data-augmentation\test
+python test.py
 
-**inputs:
-![](https://github.com/taoyizhi68/py-data-augmentation/test/img/input.png "inputs")
-**outputs:
-![](https://github.com/taoyizhi68/py-data-augmentation/test/img/output.png "outputs")
+```
+
+**inputs:**
+![](https://github.com/taoyizhi68/py-data-augmentation/blob/master/test/img/input.png "inputs")
+
+**outputs:**
+![](https://github.com/taoyizhi68/py-data-augmentation/blob/master/test/img/output.png "outputs")
