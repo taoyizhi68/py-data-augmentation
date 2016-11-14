@@ -15,7 +15,7 @@ pip install pydaag
 ```
 
 ## How to use:
-Your input images should have shape like (img_numbers, img_rows, img_cols, img_channels).
+Your input images should be a numpy arrary with shape (img_numbers, img_rows, img_cols, img_channels).
 
 If input images are grayscale, then the shape should be (img_numbers, img_rows, img_cols).
 
@@ -24,21 +24,21 @@ Simple example:
 from pydaag import pydaag
 
 #######################################################################
-inputs:
-	images: input images
-	x_slide: Maximum slide in X direction, it's ratio of width of image.
-	y_slide: Maximum slide in Y direction, it's ratio of height of image.
-	z_rotateion: Maximum rotation around Z axis.
-	y_rotateion: Maximum rotation around Y axis.
-	x_rotateion: Maximum rotation around X axis.
-	blur_max_sigma: Maximum standard deviation of Gaussian blur.
-	noise_max_sigma: Maximum standard deviation of Gaussian noise
+#inputs:
+#	images: input images
+#	x_slide: Maximum slide in X direction, it's ratio of width of image.
+#	y_slide: Maximum slide in Y direction, it's ratio of height of image.
+#	z_rotateion: Maximum rotation around Z axis.
+#	y_rotateion: Maximum rotation around Y axis.
+#	x_rotateion: Maximum rotation around X axis.
+#	blur_max_sigma: Maximum standard deviation of Gaussian blur.
+#	noise_max_sigma: Maximum standard deviation of Gaussian noise
 #######################################################################
 images_ = pydaag.data_augmentation(images, x_slide=0.2, y_slide=0.2, 
                                    z_rotation=20, y_rotation=20, x_rotation=20, 
                                    blur_max_sigma=3, noise_max_sigma=20)
 ```
-You can find an example in test/test.py.
+You can find an example in test\test.py.
 
 Run the test file:
 ```
