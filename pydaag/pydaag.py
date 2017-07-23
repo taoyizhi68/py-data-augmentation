@@ -48,7 +48,7 @@ def slide(images, img_rows, img_cols, x_max_slide, y_max_slide):
 		else:
 			y_b -= y_slide
 
-		temp = images[i, y_b:y_e, x_b:x_e]
+		temp = images[i, int(y_b):int(y_e), int(x_b):int(x_e)]
 		images[i] = transform.resize(temp, (img_rows, img_cols))
 
 def data_augmentation(images, x_slide=None, y_slide=None, 
